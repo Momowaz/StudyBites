@@ -2,31 +2,17 @@ import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 import { Router, Scene, Actions, ActionConst } from 'react-native-router-flux';
 
-//import Drawer from './files/drawer-navigator';
 import SplashScreen from './src/components/SplashScreen';
 import TimHortons from './src/components/TimHortons';
-import Homepage from './files/Homepage';
-import Menus from './files/Menus';
+
+const instructions = Platform.select({
+  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
+  android: 'Double tap R on your keyboard to reload,\n' + 'Shake or press menu button for dev menu',
+});
 
 export default class App extends Component {
   render() {
     return (
-      <Homepage />
-
-    //   <Router>
-        
-    //   <Scene key = "root">
-    //    {/* <Scene key = "SplashScreen" component = {SplashScreen}  /> */}
-
-       
-    //      <Scene key = "Homepage" component = {Homepage} title = "Homepage"  />
-    //      <Scene key = "Menus" component = {Menus} title = "Menus" />
-       
-    //   </Scene>
-    //  </Router>
-
-      /*
-
       <Router>
       <Scene key="root">
         {/* { <Scene key="SplashScreen"
@@ -34,23 +20,16 @@ export default class App extends Component {
           animation='fade'
           hideNavBar={true}
           initial={true}
-        />} }
-        
+        />} */}
 
          <Scene key="TimHortons"
-          component={Homepage}
+          component={TimHortons}
           animation='fade'
           hideNavBar={true}
         />
-        <Scene key="TimHortons"
-         component={Menus}
-         animation='fade'
-         hideNavBar={true}
-       />
         
         </Scene>
         </Router>
-        */
     );
   }
 }
