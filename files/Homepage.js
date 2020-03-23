@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import { Platform, FlatList, Alert, StyleSheet, View, Text, TouchableOpacity, Image } from 'react-native';
+import { Platform, FlatList, Alert, StyleSheet, View, Text, TouchableOpacity, Image, Navigator } from 'react-native';
 
 import { creatBottomTabNavigator, createAppContainer } from 'react-navigation';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 import { Icon } from 'react-native-elements';
 
-import Menus from './Menus';
-import profile from './ProfileScreen';
+import Menus from './Menus/TimMenus';
+import profile from './SignIn';
+//import SignIn from './SignIn';
 
 import 'react-native-gesture-handler';
 //import { NavigationContainer } from '@react-navigation/native';
@@ -40,11 +41,11 @@ class Homepage extends Component {
     };
   }
   GetGridViewItem(item) {
-    if (item == 2) {
+    if (item == 'Tim Hortons') {
       //<TouchableOpacity onPress = {() => {onPress(Menus);}}  />
       //Alert.alert('this is it!!')
       //HomeScreen(item)
-      <Menus />
+     <TouchableOpacity onPress={() =>this.props.navigation.navigate('Home')} />
 
     } else
       (Alert.alert(item))
@@ -53,22 +54,13 @@ class Homepage extends Component {
   }
 
   render() {
-
-    //   const goToMenus = () => {
-    //     Actions.Menus()
-    // }
-
-
-
-    //const { navigate } = this.props.navigation;
-
     return (
       <View style={styles.container}>
         <FlatList
           data={this.state.GridListItems}
           renderItem={({ item }) =>
             <View style={[styles.GridViewContainer, { backgroundColor: item.code }]}>
-              <Text style={styles.GridViewTextLayout} onPress={this.GetGridViewItem.bind(this, item.key)} > {item.name} </Text>
+              <Text style={styles.GridViewTextLayout} onPress={this.GetGridViewItem.bind(this, item.name)} > {item.name} </Text>
 
             </View>}
           numColumns={2}
