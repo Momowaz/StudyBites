@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import Menus from './Menus/TimMenus';
 import profile from './SignIn';
+import myAccount from './myAccount';
 
 import { creatBottomTabNavigator, createAppContainer } from 'react-navigation';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
@@ -113,8 +114,8 @@ const TabNavigator = createMaterialBottomTabNavigator(
         }
       },
   
-      profile: {
-        screen: profile,
+      myAccount: {
+        screen: myAccount,
         navigationOptions: {
           tabBarLabel: 'Account',
           activeColor: '#ff0000',
@@ -152,15 +153,9 @@ const styles = StyleSheet.create({
   },
   name:{
     fontSize:22,
-    color:"#FFFFFF",
+    color:"#696969",
     fontWeight:'600',
   },
-
-//   bodyContent: {
-//     flex: 1,
-//     alignItems: 'center',
-//     padding:30,
-//   },
   textInfo:{
     fontSize:18,
     marginTop:20,

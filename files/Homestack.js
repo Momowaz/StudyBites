@@ -10,6 +10,7 @@ import Cafeteria from './Menus/Cafeteria';
 import KwantlenPizza from './Menus/KwantlenPizza';
 import GulbergMenu from './Menus/GulberbMenu';
 import Royalcurry from './Menus/Royalcurry';
+import myAccount from './myAccount';
 
 const screens = {
    Home: {
@@ -33,9 +34,12 @@ const screens = {
    Royalcurry:{
       screen: Royalcurry
    },
+   myAccount: {
+      screen: myAccount
+   },
    SignIn:{
       screen: SignIn
-   }
+   },
 }
 
 const HomeStack = createStackNavigator(screens);

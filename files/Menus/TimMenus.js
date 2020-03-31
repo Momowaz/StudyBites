@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text,TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, View, Text,TouchableOpacity, Image, Alert } from 'react-native';
 import { SectionGrid } from 'react-native-super-grid';
 import { Actions } from 'react-native-router-flux'
  
@@ -32,6 +32,10 @@ export default class Menus extends Component {
       //   Actions.Homepage()
       // }
 
+      const showAlert = (xs) => {
+        Alert.alert("this is " + xs)
+      }
+
     return (
 
       //<TouchableOpacity onPress ={goToHome}>
@@ -61,7 +65,7 @@ export default class Menus extends Component {
         style={styles.gridView}
         renderItem={({ item, section, index }) => (
           <View style={[styles.itemContainer, { backgroundColor: item.code }]}>
-            <Image style={styles.cardImage} source={{uri:item.image}} />
+            <Image onPress = {showAlert(item.name)} style={styles.cardImage} source={{uri:item.image}} />
             <Text style={styles.itemName}>{item.name}</Text>
             <Text style={styles.itemPrice}>{item.price}</Text>
           </View>

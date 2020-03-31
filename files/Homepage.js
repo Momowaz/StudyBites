@@ -7,6 +7,7 @@ import { Icon } from 'react-native-elements';
 
 import Menus from './Menus/TimMenus';
 import profile from './SignIn';
+import myAccount from './myAccount'
 //import SignIn from './SignIn';
 
 import 'react-native-gesture-handler';
@@ -15,15 +16,6 @@ import 'react-native-gesture-handler';
 
 import { Actions } from 'react-native-router-flux';
 //import { Icon } from 'react-native-paper/lib/typescript/src/components/Avatar/Avatar';
-
-
-// function Home({navigation}) {
-
-//   const pressHandler = () => {
-//     navigation.navigate('Menus');
-//   }
-
-// }
 
 
 class Homepage extends Component {
@@ -104,8 +96,8 @@ const TabNavigator = createMaterialBottomTabNavigator(
       }
     },
 
-    profile: {
-      screen: profile,
+    myAccount: {
+      screen: myAccount,
       navigationOptions: {
         tabBarLabel: 'Account',
         activeColor: '#ff0000',

@@ -42,7 +42,7 @@ onClickListener = (viewId) => {
         <View style={styles.inputContainer}>
           <Image style={styles.inputIcon} source={{uri: 'https://png.icons8.com/message/ultraviolet/50/3498db'}}/>
           <TextInput style={styles.inputs}
-              placeholder="Email"
+              placeholder="Email/Phone"
               keyboardType="email-address"
               autoCapitalize='none'
               underlineColorAndroid='transparent'
@@ -60,12 +60,16 @@ onClickListener = (viewId) => {
               onChangeText={(password) => this.setState({password})}/>
         </View>
 
-        <TouchableHighlight style={[styles.buttonContainer, styles.signupButton]} onPress={() => this.onClickListener('sign_up')}>
-          <Text style={styles.signUpText}>Sign In</Text>
+        <TouchableOpacity onPress={() => {alert('Email has been sent to reset password!');}}>
+          <Text style={styles.forgot}>Forgot Password?</Text>
+        </TouchableOpacity>
+
+        <TouchableHighlight style={[styles.buttonContainer, styles.signupButton]}>
+          <Text onPress={() =>this.props.navigation.navigate('myAccount')} style={styles.signUpText}>Sign In</Text>
         </TouchableHighlight>
        
         <View>
-          <Text>Don't have account?</Text>
+          <Text style={styles.forgot}>Don't have account?</Text>
         </View>
 
         <Button 
@@ -88,6 +92,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#00b5ec',
+  },
+  forgot:{
+    color:"white",
+    fontSize:14,
+    marginBottom:10
   },
   inputContainer: {
       borderBottomColor: '#F5FCFF',
