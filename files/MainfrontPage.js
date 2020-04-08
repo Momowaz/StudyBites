@@ -8,21 +8,17 @@ import {
   SafeAreaView,
   Alert
 } from 'react-native';
-import Menus from './Menus/TimMenus';
+//import Menus from './Menus/TimMenus';
 import profile from './SignIn';
 import myAccount from './myAccount';
+import Map from './Map';
 
 import { creatBottomTabNavigator, createAppContainer } from 'react-navigation';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 import { Icon } from 'react-native-elements';
 
  class ProfileIconsView extends Component {
-
-    // static navigationOptions = {
-    //     title: 'Home',
-    // }
-    
-  render() {
+      render() {
 
     return (
         <SafeAreaView style={styles.container}>
@@ -43,16 +39,6 @@ import { Icon } from 'react-native-elements';
             <View style={styles.bodyContent}>
 
               <View style={styles.menuBox}>
-                <Image  style={styles.icon} source={require('./images/timhortons.png')}/>
-                <Text  onPress={() =>this.props.navigation.navigate('THMenus')} style={styles.info}>Tim Hortons</Text>
-              </View>
-
-              <View style={styles.menuBox}>
-                <Image style={styles.icon} source={require('./images/kpuGrassRootsLogo.png')}/>
-                <Text onPress={() =>this.props.navigation.navigate('GRMenus')} style={styles.info}>Cafe & Lounge</Text>
-              </View>
-
-              <View style={styles.menuBox}>
                 <Image style={styles.icon} source={require('./images/kpuCaffee.png')}/>
                 <Text onPress={() =>this.props.navigation.navigate('Cafeteria')} style={styles.info}>Cafeteria</Text>
               </View>
@@ -71,7 +57,15 @@ import { Icon } from 'react-native-elements';
                 <Image style={styles.icon} source={require('./images/royalcurryLogo.png')}/>
                 <Text onPress={() =>this.props.navigation.navigate('Royalcurry')} style={styles.info}>Royal Curry</Text>
               </View>
+              <View style={styles.menuBox}>
+                <Image  style={styles.icon} source={require('./images/timhortons.png')}/>
+                <Text  onPress={() =>this.props.navigation.navigate('THMenus')} style={styles.info}>Tim Hortons</Text>
+              </View>
 
+              <View style={styles.menuBox}>
+                <Image style={styles.icon} source={require('./images/kpuGrassRootsLogo.png')}/>
+                <Text onPress={() =>this.props.navigation.navigate('GRMenus')} style={styles.info}>Cafe & Lounge</Text>
+              </View>
 
             </View>
         </View>
@@ -91,7 +85,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
           tabBarLabel: 'Home',
           activeColor: '#ff0000',
           inactiveColor: '#000000',
-          barStyle: { backgroundColor: '#67baf6' },
+          barStyle: { backgroundColor: '#27B998' },
           tabBarIcon: () => (
             <View>
               <Icon name={'home'} size={25} style={{ color: '#ff0000' }} />
@@ -99,16 +93,16 @@ const TabNavigator = createMaterialBottomTabNavigator(
           )
         }
       },
-      Menus: {
-        screen: Menus,
+      Map: {
+        screen: Map,
         navigationOptions: {
-          tabBarLabel: 'Orders',
+          tabBarLabel: 'Map',
           activeColor: '#ff0000',
           inactiveColor: '#000000',
-          barStyle: { backgroundColor: '#67baf6' },
+          barStyle: { backgroundColor: '#27B998' },
           tabBarIcon: () => (
             <View>
-              <Icon name={'add-shopping-cart'} size={25} style={{ color: '#ff0000' }} />
+              <Icon name={'map'} size={25} style={{ color: '#ff0000' }} />
             </View>
           )
         }
@@ -120,7 +114,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
           tabBarLabel: 'Account',
           activeColor: '#ff0000',
           inactiveColor: '#000000',
-          barStyle: { backgroundColor: '#67baf6' },
+          barStyle: { backgroundColor: '#27B998' },
           tabBarIcon: () => (
             <View>
               <Icon name={'person'} size={25} style={{ color: '#ff0000' }} />
@@ -135,7 +129,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
 
 const styles = StyleSheet.create({
   header:{
-    backgroundColor: "#00BFFF",
+    backgroundColor: "#27B998",
   },
   headerContent:{
     padding:25,
@@ -170,7 +164,7 @@ const styles = StyleSheet.create({
     paddingLeft:30
   },
   menuBox:{
-    backgroundColor: "#00BFFF",
+    backgroundColor: "#F9A143",
     width:120,
     height:120,
     alignItems: 'center',

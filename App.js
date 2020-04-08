@@ -6,7 +6,15 @@ import SplashScreen from './src/components/SplashScreen';
 import ProfileIconsView from './files/MainfrontPage'
 
 import Myroutes from './files/Homestack';
-
+import * as firebase from "firebase";
+var config = {
+  apiKey: "*****************************",
+  authDomain: "fblogin-with-react-native.firebaseapp.com",
+  databaseURL: "https://fblogin-with-react-native.firebaseio.com",
+  projectId: "fblogin-with-react-native",
+  storageBucket: "fblogin-with-react-native.appspot.com",
+  messagingSenderId: "************"
+};
 export default class App extends Component {
   render() {
     return (

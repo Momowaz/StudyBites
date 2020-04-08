@@ -27,10 +27,6 @@ export default class Menus extends Component {
       { name: 'Milk', price:'$1.69', code: '#bdc3c7',image:"https://img.icons8.com/cotton/50/000000/tetra-pak.png" },
       { name: 'Canada Dry', price:'$2.39', code: '#7f8c8d',image:"https://img.icons8.com/ios/50/000000/beer-can.png"},
     ];
- 
-      // const goToHome = () => {
-      //   Actions.Homepage()
-      // }
 
       const showAlert = (xs) => {
         Alert.alert("this is " + xs)
@@ -62,12 +58,17 @@ export default class Menus extends Component {
             data: items.slice(16, 20),
           },
         ]}
+
+
+      
+
+
         style={styles.gridView}
         renderItem={({ item, section, index }) => (
           <View style={[styles.itemContainer, { backgroundColor: item.code }]}>
-            <Image onPress = {showAlert(item.name)} style={styles.cardImage} source={{uri:item.image}} />
-            <Text style={styles.itemName}>{item.name}</Text>
-            <Text style={styles.itemPrice}>{item.price}</Text>
+            <Image style={styles.cardImage} source={{uri:item.image}} />
+            <Text  style={styles.itemName}>{item.name}</Text>
+            <Text  style={styles.itemPrice}>{item.price}</Text>
           </View>
         )}
         renderSectionHeader={({ section }) => (
@@ -111,7 +112,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     alignItems: 'center',
     textAlign: 'center',
-    backgroundColor: '#67baf6',
+    backgroundColor: '#F9A143',
     color: 'black',
     padding: 10,
   },

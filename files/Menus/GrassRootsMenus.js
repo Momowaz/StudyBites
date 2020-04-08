@@ -20,20 +20,15 @@ export default class Menus extends Component {
 
   render() {
     const items = [
-      { name: 'Coffee', price:'$1.86', code: '#1abc9c', image:"https://img.icons8.com/ios/50/000000/coffee-to-go.png"},
-      { name: 'Latte',  price:'$3.09', code: '#2ecc71', image:"https://img.icons8.com/ios/50/000000/cafe.png" },
-      { name: 'Steeped Tea',price:'$1.86', code: '#3498db', image:"https://img.icons8.com/ios/50/000000/tea.png" },
-      { name: 'Mocha Latte',price:'$3.39', code: '#9b59b6', image:"https://img.icons8.com/ios/50/000000/java-coffee-cup-logo.png" },
-      { name: 'French Vanilla',price:'$2.29', code: '#3498db', image:"https://img.icons8.com/ios/50/000000/kawaii-coffee.png" },
-      { name: 'Hot Chocolate',price:'$1.99', code: '#16a085', image:"https://img.icons8.com/ios/50/000000/cup.png" },
-      { name: 'Coffee Mocha', price:'$1.99', code: '#27ae60' , image:"https://img.icons8.com/ios/50/000000/solo-cup.png"},
-      { name: 'Vanilla Chai',price:'$2.39', code: '#2980b9', image:"https://img.icons8.com/ios/50/000000/sippy-cup.png" },
-      { name: 'Breakfast Sandwiches', price: '$3.79', code: '#8e44ad', image:"https://img.icons8.com/ios/50/000000/sandwich.png" },
-      { name: 'Wraps Platter', price:'$3.99', code: '#2c3e50', image:"https://img.icons8.com/ios/50/000000/wrap.png"},
+      { name: 'Latte', price:'$1.86', code: '#1abc9c', image:"https://img.icons8.com/ios/50/000000/coffee-to-go.png"},
+      { name: 'Cappuccino',  price:'$3.09', code: '#2ecc71', image:"https://img.icons8.com/ios/50/000000/cafe.png" },
+      { name: 'Organic Tea',price:'$1.86', code: '#3498db', image:"https://img.icons8.com/ios/50/000000/tea.png" },
+      { name: 'Sandwiches', price: '$3.79', code: '#8e44ad', image:"https://img.icons8.com/ios/50/000000/sandwich.png" },
+      { name: 'Snacks', price:'$3.99', code: '#2c3e50', image:"https://img.icons8.com/ios/50/000000/wrap.png"},
       { name: 'Egg & Chees Sandwich', price: '$3.29', code: '#f1c40f', image:"https://img.icons8.com/ios/50/000000/sandwich-with-fried-egg.png" },
       { name: 'Yogurt Parfait', price: '$2.99', code: '#e67e22', image:"https://img.icons8.com/ios/50/000000/burger-dip.png"},
       { name: 'Catering Chili', price: '$17.89', code: '#e74c3c', image:"https://img.icons8.com/ios/50/000000/tableware.png"},
-      { name: 'Catering Soup', price: '$13.89', code: '#d35400', image:"https://img.icons8.com/ios/50/000000/soup-plate.png"},
+      { name: 'Hot Soup', price: '$13.89', code: '#d35400', image:"https://img.icons8.com/ios/50/000000/soup-plate.png"},
       { name: 'Chipotle Chicken Wrap', price: '$7.19', code: '#95a5a6',image:"https://img.icons8.com/color/50/000000/wrap.png"},
       { name: 'Ham & Swiss', price:'$6.49', code: '#f39c12',image:"https://img.icons8.com/ios/50/000000/hamburger.png"},
       { name: 'Bottled Water', price:'$1.79', code: '#d35400' , image:"https://img.icons8.com/ios/50/000000/plastic.png"},
@@ -56,21 +51,17 @@ export default class Menus extends Component {
         // spacing={20}
         sections={[
           {
-            title: 'HOT BEVERAGES',
-            data: items.slice(0, 8),
+            title: 'Organic coffee',
+            data: items.slice(0, 3),
           },
           {
-            title: 'BREAKFAST PLATTERS',
-            data: items.slice(8, 12),
+            title: 'Grab and Go',
+            data: items.slice(3, 12),
           },
           {
-            title: 'LUNCH PLATTERS',
-            data: items.slice(12, 16),
-          },
-          {
-            title: 'COLD BEVERAGES',
-            data: items.slice(16, 20),
-          },
+            title: 'Drinks',
+            data: items.slice(12, 14),
+          }
         ]}
         style={styles.gridView}
         renderItem={({ item, section, index }) => (
@@ -121,7 +112,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     alignItems: 'center',
     textAlign: 'center',
-    backgroundColor: '#67baf6',
+    backgroundColor: '#F9A143',
     color: 'black',
     padding: 10,
   },

@@ -11,19 +11,23 @@ import KwantlenPizza from './Menus/KwantlenPizza';
 import GulbergMenu from './Menus/GulberbMenu';
 import Royalcurry from './Menus/Royalcurry';
 import myAccount from './myAccount';
+import underconstruction from './underconstruction';
+import SignUp from './SignUpView';
+import Map from './Map';
+import Orders from './ordersList/Orders'
 
 const screens = {
    Home: {
       screen: MainfrontPage
+   },
+   Cafeteria:{
+      screen: Cafeteria
    },
    THMenus:{
       screen: THMenus
    },
    GRMenus:{
       screen: GRMenus
-   },
-   Cafeteria:{
-      screen: Cafeteria
    },
    KwantlenPizza:{
       screen: KwantlenPizza
@@ -40,6 +44,18 @@ const screens = {
    SignIn:{
       screen: SignIn
    },
+   underconstruction:{
+      screen: underconstruction
+   },
+   SignUp:{
+      screen: SignUp
+   },
+   Map:{
+      screen: Map
+   },
+   Orders:{
+      screen: Orders
+   }
 }
 
 const HomeStack = createStackNavigator(screens);

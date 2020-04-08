@@ -16,6 +16,7 @@ export default class SignUpView extends Component {
     super(props);
     state = {
       fullName: '',
+      phone: '',
       email   : '',
       password: '',
     }
@@ -29,6 +30,17 @@ export default class SignUpView extends Component {
   render() {
     return (
       <View style={styles.container}>
+           <View style={styles.header}>
+            <View style={styles.headerContent}>
+                <Image style={styles.avatar}
+                 source={require('../src/img/logo.png')}
+               />
+                <Text>
+                  Become a courier today!
+                </Text>
+            </View>
+          </View>
+
         <View style={styles.inputContainer}>
           <Image style={styles.inputIcon} source={{uri: 'https://png.icons8.com/male-user/ultraviolet/50/3498db'}}/>
           <TextInput style={styles.inputs}
@@ -36,6 +48,16 @@ export default class SignUpView extends Component {
               keyboardType="email-address"
               underlineColorAndroid='transparent'
               onChangeText={(fullName) => this.setState({fullName})}/>
+        </View>
+
+        <View style={styles.inputContainer}>
+          <Image style={styles.inputIcon} source={{uri: 'https://png.icons8.com/message/ultraviolet/50/3498db'}}/>
+          <TextInput style={styles.inputs}
+              placeholder="(604) 200-1212"
+              keyboardType='numeric'
+              autoCapitalize='none'
+              underlineColorAndroid='transparent'
+              onChangeText={(phone) => this.setState({phone})}/>
         </View>
 
         <View style={styles.inputContainer}>
@@ -74,6 +96,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#00b5ec',
   },
+  headerContent:{
+    padding:25,
+    marginTop: 10,
+    alignItems: 'center',
+  },
+  avatar: {
+    width: 110,
+    height: 110,
+    borderRadius: 100,
+    borderWidth: 4,
+    borderColor: "white",
+    backgroundColor: 'white',
+    marginBottom:10,
+  },
   inputContainer: {
       borderBottomColor: '#F5FCFF',
       backgroundColor: '#FFFFFF',
@@ -107,7 +143,7 @@ const styles = StyleSheet.create({
     borderRadius:30,
   },
   signupButton: {
-    backgroundColor: "#FF4DFF",
+    backgroundColor: "#F9A143",
   },
   signUpText: {
     color: 'white',

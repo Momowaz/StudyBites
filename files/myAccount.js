@@ -29,7 +29,7 @@ export default class Account extends Component {
                 <Image style={styles.icon} source={{uri: 'https://img.icons8.com/ios/50/000000/card-security.png'}}/>
               </View>
               <View style={styles.infoContent}>
-                <Text style={styles.info}>Payment Profile</Text>
+                <Text onPress={() =>this.props.navigation.navigate('underconstruction')} style={styles.info}>Payment Profile</Text>
               </View>
             </View>
 
@@ -38,7 +38,7 @@ export default class Account extends Component {
                 <Image style={styles.icon} source={{uri: 'https://img.icons8.com/ios/50/000000/address.png'}}/>
               </View>
               <View style={styles.infoContent}>
-                <Text style={styles.info}>Frequent Address</Text>
+                <Text onPress={() =>this.props.navigation.navigate('underconstruction')} style={styles.info}>Frequent Address</Text>
               </View>
             </View>
 
@@ -47,7 +47,7 @@ export default class Account extends Component {
                 <Image style={styles.icon} source={{uri: "https://img.icons8.com/ios/50/000000/alarm.png"}}/>
               </View>
               <View style={styles.infoContent}>
-                <Text style={styles.info}>Notifications</Text>
+                <Text onPress={() =>this.props.navigation.navigate('underconstruction')} style={styles.info}>Notifications</Text>
               </View>
             </View>
 
@@ -56,7 +56,7 @@ export default class Account extends Component {
                 <Image style={styles.icon} source={{uri: "https://img.icons8.com/ios/50/000000/online-support.png"}}/>
               </View>
               <View style={styles.infoContent}>
-                <Text style={styles.info}>Support</Text>
+                <Text onPress={() =>this.props.navigation.navigate('underconstruction')} style={styles.info}>Support</Text>
               </View>
             </View>
 
@@ -65,7 +65,7 @@ export default class Account extends Component {
                 <Image style={styles.icon} source={{uri: "https://img.icons8.com/ios/50/000000/privacy.png"}}/>
               </View>
               <View style={styles.infoContent}>
-                <Text style={styles.info}>Privacy</Text>
+                <Text onPress={() =>this.props.navigation.navigate('underconstruction')} style={styles.info}>Privacy</Text>
               </View>
             </View>
 
@@ -86,7 +86,7 @@ export default class Account extends Component {
 
 const styles = StyleSheet.create({
   header:{
-    backgroundColor: "#ADD8E6",
+    backgroundColor: "#F9A143",
   },
   headerContent:{
     padding:30,
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     fontWeight:'600',
   },
   body:{
-    backgroundColor: "#20B2AA",
+    backgroundColor: "#CCFFFF",
     height:500
   },
   item:{

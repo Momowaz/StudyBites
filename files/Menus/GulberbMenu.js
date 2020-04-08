@@ -39,37 +39,37 @@ export default class GulbergMenu extends Component {
                             </View>
 
                             <View style={styles.GBmenuBox}>
-                                <Text onPress={() => this.props.navigation.navigate('THMenus')} style={styles.GBfont}>Butter Chicken</Text>
+                                <Text onPress={() => this.props.navigation.navigate('Orders')} style={styles.GBfont}>Butter Chicken</Text>
                                 <Text style={styles.desc}>Mild creamy tomatoe based boneless chicken curry</Text>
                                 <Text style={styles.desc}>$8.50</Text>
                             </View>
 
                             <View style={styles.GBmenuBox}>
-                                <Text onPress={() => this.props.navigation.navigate('GRMenus')} style={styles.GBfont}>Beef Nihari</Text>
+                                <Text onPress={() => this.props.navigation.navigate('Orders')} style={styles.GBfont}>Beef Nihari</Text>
                                 <Text style={styles.desc}>Slow cooked spicy beef shank curry</Text>
                                 <Text style={styles.desc}>$9.50</Text>
                             </View>
 
                             <View style={styles.GBmenuBox}>
-                                <Text style={styles.GBfont}>Chicken Karahi</Text>
+                                <Text onPress={() => this.props.navigation.navigate('Orders')} style={styles.GBfont}>Chicken Karahi</Text>
                                 <Text style={styles.desc}>Tomato based chicken Karahi with ginger, garlic and spices</Text>
                                 <Text style={styles.desc}>$8.50</Text>
                             </View>
 
                             <View style={styles.GBmenuBox}>
-                                <Text style={styles.GBfont}>Beef Seekh Kabab</Text>
+                                <Text onPress={() => this.props.navigation.navigate('Orders')} style={styles.GBfont}>Beef Seekh Kabab</Text>
                                 <Text style={styles.desc}>Skewer of minced beef prepared in the tandoor</Text>
                                 <Text style={styles.desc}>$6.95</Text>
                             </View>
 
                             <View style={styles.GBmenuBox}>
-                                <Text style={styles.GBfont}>Mixed Grill Sizzler</Text>
+                                <Text onPress={() => this.props.navigation.navigate('Orders')} style={styles.GBfont}>Mixed Grill Sizzler</Text>
                                 <Text style={styles.desc}>A mixture of chicken tikka with 1 naan, rice and raita</Text>
                                 <Text style={styles.desc}>$25.95</Text>
                             </View>
 
                             <View style={styles.GBmenuBox}>
-                                <Text style={styles.GBfont}>Chicken Donair Platter</Text>
+                                <Text onPress={() => this.props.navigation.navigate('Orders')} style={styles.GBfont}>Chicken Donair Platter</Text>
                                 <Text style={styles.desc}>Shredded donair chicken served with rice, salad and humus, garlic sauce</Text>
                                 <Text style={styles.desc}>$8.50</Text>
                             </View>

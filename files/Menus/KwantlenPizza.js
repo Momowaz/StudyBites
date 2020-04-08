@@ -36,43 +36,43 @@ import { Icon } from 'react-native-elements';
 </View>
 
 <View style={styles.KPmenuBox}>
-  <Text onPress={() => this.props.navigation.navigate('THMenus')} style={styles.info}>Greek Special</Text>
+  <Text onPress={() => this.props.navigation.navigate('Orders')} style={styles.info}>Greek Special</Text>
   <Text style={styles.desc}>Onions, Tomatoes, Feta Cheese, Green Peppers and Olives</Text>
   <Text style={styles.desc}>Small: $18.99 | Med: $22.99 | Large: $26.99</Text>
 </View>
 
 <View style={styles.KPmenuBox}>
-  <Text onPress={() => this.props.navigation.navigate('GRMenus')} style={styles.info}>Cheese Pizza</Text>
+  <Text onPress={() => this.props.navigation.navigate('Orders')} style={styles.info}>Cheese Pizza</Text>
   <Text style={styles.desc}>Onions, Tomatoes, Feta Cheese, Green Peppers and Olives</Text>
   <Text style={styles.desc}>Small: $18.99 | Med: $22.99 | Large: $26.99</Text>
 </View>
 
 <View style={styles.KPmenuBox}>
-  <Text style={styles.info}>Spinch Pizza</Text>
+  <Text onPress={() => this.props.navigation.navigate('Orders')}style={styles.info}>Spinch Pizza</Text>
   <Text style={styles.desc}>Onions, Tomatoes, Feta Cheese, Green Peppers and Olives</Text>
   <Text style={styles.desc}>Small: $18.99 | Med: $22.99 | Large: $26.99</Text>
 </View>
 
 <View style={styles.KPmenuBox}>
-  <Text style={styles.info}>Bacon Double Cheese Burger</Text>
+  <Text onPress={() => this.props.navigation.navigate('Orders')}style={styles.info}>Bacon Double Cheese Burger</Text>
   <Text style={styles.desc}>Onions, Tomatoes, Feta Cheese, Green Peppers and Olives</Text>
   <Text style={styles.desc}>Small: $18.99 | Med: $22.99 | Large: $26.99</Text>
 </View>
 
 <View style={styles.KPmenuBox}>
-  <Text style={styles.info}>Papperoni Pizza</Text>
+  <Text onPress={() => this.props.navigation.navigate('Orders')}style={styles.info}>Papperoni Pizza</Text>
   <Text style={styles.desc}>Onions, Tomatoes, Feta Cheese, Green Peppers and Olives</Text>
   <Text style={styles.desc}>Small: $18.99 | Med: $22.99 | Large: $26.99</Text>
 </View>
 
 <View style={styles.KPmenuBox}>
-  <Text style={styles.info}>Chicken Pizza</Text>
+  <Text onPress={() => this.props.navigation.navigate('Orders')}style={styles.info}>Chicken Pizza</Text>
   <Text style={styles.desc}>Onions, Tomatoes, Feta Cheese, Green Peppers and Olives</Text>
   <Text style={styles.desc}>Small: $18.99 | Med: $22.99 | Large: $26.99</Text>
 </View>
 
 <View style={styles.KPmenuBox}>
-  <Text style={styles.info}>Meat Lovers Pizza</Text>
+  <Text onPress={() => this.props.navigation.navigate('Orders')}style={styles.info}>Meat Lovers Pizza</Text>
   <Text style={styles.desc}>Onions, Tomatoes, Feta Cheese, Green Peppers and Olives</Text>
   <Text style={styles.desc}>Small: $18.99 | Med: $22.99 | Large: $26.99</Text>
 </View>
